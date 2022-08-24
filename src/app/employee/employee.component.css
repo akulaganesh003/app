@@ -1,0 +1,27 @@
+table,th,td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+th{
+    background-color: bisque;
+}
+form,h1{
+    text-align: center;
+}
+
+#delete{
+    background-color: red;
+}
+
+#edit{
+    background-color: green;
+}
+
+#submit{
+    background-color: yellowgreen;
+}
+
+
+.callout-header{
+    color: red;
+}

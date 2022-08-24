@@ -1,0 +1,44 @@
+<h2>Employee  Details</h2>
+<div *ngIf="users">
+    <div style="float:right;margin-bottom: 10px;"><button class="btn btn-primary">Add employee</button></div>
+    <br>
+         <table class="table table-hover">
+            <thead>
+               <tr>
+                <th>Employee Id</th>
+                <th>FirstName</th>
+                <th>MiddleName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>PhoneNo</th>
+                <th>Address1</th>
+                <th>Address2</th>
+                <th>Salary</th>
+                <th>GenderId</th>
+                <th>DeptId</th>
+                <th>CountryId</th>
+                <th>Password</th>
+                <th>Action</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of users">
+                    <td>{{employee.empid}} </td>
+                    <td>{{employee.FirstName}}</td>
+                    <td>{{employee.MiddleName}}</td>
+                    <td>{{employee.LastName}}</td>
+                    <td>{{employee.Email}}</td>
+                    <td>{{employee.PhoneNo}}</td> 
+                    <td>{{employee.Address1}}</td>
+                    <td>{{employee.Address2}}</td>
+                    <td>{{employee.SAL}}</td>
+                    <td>{{employee.GenderId}}</td>
+                    <td>{{employee.DeptId}}</td>
+                    <td>{{employee.CountryId}}</td>
+                    <td>{{employee.Pwd}}</td>
+                    <td><button class="btn btn-danger"  (click)="onDeleteEmployee(employee.empid)">Delete</button>
+                    <button class="btn btn-success" (click)="onEditEmployee(employee.empid)">Edit</button></td>
+                 </tr>
+             </tbody>
+           </table>
+  </div>

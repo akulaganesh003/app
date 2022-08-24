@@ -1,0 +1,153 @@
+<h1>Insert Employee Details</h1>
+<form [formGroup]="empForm" #addEmployeeForm="ngForm" (ngSubmit)="addEmployee(addEmployeeForm.value)">
+     
+    <!--<div class="mb-3 row">
+         <label  class="col-sm-2 col-form-label">Employee Id</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Enter employee id" formControlName="Empid">
+           </div>
+           <div *ngIf="empForm.controls['Empid'].errors && empForm.controls['Empid'].touched" class="callout-header">
+            <span *ngIf="empForm.controls['Empid'].errors['required']">Employee Id must be enter</span>
+            <span *ngIf="empForm.controls['Empid'].errors['minlength']">Employee Id must be atleast 4 digits</span>
+        </div>
+    </div>-->
+  
+    <div class="mb-3 row">
+         <label class="col-sm-2 col-form-label">FirstName</label>
+             <div class="col-sm-10">
+                 <input type="text" class="form-control" formControlName="FirstName" name="FirstName" ngModel >
+            </div>
+            <div *ngIf="empForm.controls['FirstName'].errors && empForm.controls['FirstName'].touched" class="callout-header">
+              <span *ngIf="empForm.controls['FirstName'].errors['required']">Employee FirstName must be enter</span>
+          </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">MiddleName</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="MiddleName" name="MiddleName" ngModel>
+      </div>
+    </div>
+
+    
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">LastName</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="LastName" name="LastName" ngModel> 
+      </div>
+      <div *ngIf="empForm.controls['LastName'].errors && empForm.controls['LastName'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['LastName'].errors['required']">Employee LastName must be enter</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" formControlName="Email" name="Email" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Email'].errors && empForm.controls['Email'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Email'].errors['required']">Email must be enter</span>
+        <span *ngIf="empForm.controls['Email'].errors['email'] && empForm.controls['Email'].errors['pattern']">Email must be valid</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">PhoneNo</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="PhoneNo" name="PhoneNo" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['PhoneNo'].errors && empForm.controls['PhoneNo'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['PhoneNo'].errors['required']">Phone Number must be enter</span>
+        <span *ngIf="empForm.controls['PhoneNo'].errors['pattern']">Phone Number must be 10 digits</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Address1</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="Address1" name="Address1" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Address1'].errors && empForm.controls['Address1'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Address1'].errors['required']">Address must be enter</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Address2</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="Address2" name="Address2" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Address2'].errors && empForm.controls['Address2'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Address2'].errors['required']">Address must be enter</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Salary</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="Salary" name="SAL" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Salary'].errors && empForm.controls['Salary'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Salary'].errors['required']">Salary must be enter</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Gender</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="Gender"  name="GenderId" ngModel>
+       <!-- <input type="radio" formControlName="Gender" value=1 name="GenderId" ngModel> Male
+        <input type="radio" formControlName="Gender" value=2  name="GenderId" ngModel> Female
+        <input type="radio" formControlName="Gender" value=3 name="GenderId" ngModel> TransGender-->
+      </div>
+      <div *ngIf="empForm.controls['Gender'].errors && empForm.controls['Gender'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Gender'].errors['required']">Please select your Gender</span>
+    </div>
+    </div>
+
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Deparment</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="Deparment" name="DeptId" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Deparment'].errors && empForm.controls['Deparment'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Deparment'].errors['required']">Please enter your Deparment</span>
+    </div>
+    </div>
+
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Country</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="Country" name="CountryId" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Country'].errors && empForm.controls['Country'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Country'].errors['required']">Please enter your Country</span>
+    </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label  class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" formControlName="Password" name="Pwd" ngModel>
+      </div>
+      <div *ngIf="empForm.controls['Password'].errors && empForm.controls['Password'].touched" class="callout-header">
+        <span *ngIf="empForm.controls['Password'].errors['required']">Please enter your Password</span>
+        <span *ngIf="empForm.controls['Password'].errors['minlength']">Password must be atleast 8 characters</span>
+    </div>
+    </div>
+
+    
+    <input type="submit"  class="btn btn-success" value="{{editMode ? 'Update Details' : 'Submit'}}"> &nbsp;
+    <input type="reset" class="btn btn-danger">
+  </form>
