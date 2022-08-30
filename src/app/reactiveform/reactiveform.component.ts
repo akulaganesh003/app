@@ -31,6 +31,7 @@ export class ReactiveformComponent implements OnInit {
     }
  
     alert('SUCCESS!!');
+    this.registerForm.reset();
   }
 
 }

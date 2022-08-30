@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TempletedrivenformComponent implements OnInit {
 
+  todayDate : Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
