@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TempletedrivenformComponent } from './templetedrivenform/templetedrivenform.component';
+import { LoginComponent } from './user-auth/login/login.component';
 
 const routes: Routes = [
   {
@@ -23,19 +24,19 @@ const routes: Routes = [
   {
     path:'Navigation',
     component:  NavigationComponent,
-    children:[
-      {
-        path: 'ReactiveForm',
-        component: ReactiveformComponent,
-      },
-      {
-        path: 'TemplateDriven',
-        component: TempletedrivenformComponent,
-      }
-
-    ]
   },
-  
+  {
+   path: 'ReactiveForm',
+   component: ReactiveformComponent,
+  },
+  {
+   path: 'TemplateDriven',
+   component: TempletedrivenformComponent,
+ },
+ {
+  path:'login',
+  component:LoginComponent
+ }
 ];
 
 @NgModule({

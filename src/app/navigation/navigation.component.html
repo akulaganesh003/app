@@ -1,10 +1,9 @@
-<h1>navigation</h1>
-<h1 style="text-align: center;">Welocme to the Forms</h1>
-
-<div style="text-align: right;">
-<a routerLink="ReactiveForm">Reactive Form</a>
-&nbsp;
-<a routerLink="TemplateDriven">Template Driven Data</a>
-&nbsp;
-</div>
-<router-outlet></router-outlet>
+<input type="text" placeholder="Enter Name" #box name="username" (blur)="getvalue(box.value)">
+<!-- <button (click)="getvalue(box.value)">Click</button> -->
+<br><br>
+<input type="date" placeholder="Enter Name" #box1 name="date" (blur)="getvalue1(box1.value)">
+<!-- <button (click)="getvalue1(box1.value)">Click</button> -->
+<br><br>
+<input type="text" [value]=tempValue readonly>
+<br><br>
+<input type="date" value="{{tempValue1}}" readonly>
