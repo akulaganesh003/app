@@ -14,6 +14,7 @@ import { EmpDataComponent } from './emp-data/emp-data.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TempletedrivenformComponent } from './templetedrivenform/templetedrivenform.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ArrayComponent } from './array/array.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     ReactiveformComponent,
     TempletedrivenformComponent,
     NavigationComponent,
+    ArrayComponent,
   
   ],
   imports: [

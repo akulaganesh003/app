@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Add User</h2>  
+    <form class="form-inline" autocomplete="off" (submit)="addStudent()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name">
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" id="age" name="age" [(ngModel)]="user.age">
+        </div>
+        <div class="form-group" *ngIf="!(usersList && usersList.length)">
+            <label for="college">College:</label>
+            <input type="text" class="form-control" id="college" name="college" [(ngModel)]="user.college">
+          </div>
+          <div class="form-group" *ngIf="usersList && usersList.length">
+            <label for="pwd">College:</label>
+            <input type="text" class="form-control" id="college" name="college" readonly [(ngModel)]="user.college">
+          </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    
+    <div class="user-list" *ngIf="usersList && usersList.length">
+        <h2>List of Users</h2>           
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>SL.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>College</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersList; let i = index">
+                    <th>{{i+1}}</th>
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.college}}</td>
+                    <td>
+                        <button style="margin-right: 5px;" class="btn btn-warning" (click)="editStudent(i)">Edit</button>
+                        <button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

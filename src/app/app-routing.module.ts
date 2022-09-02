@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArrayComponent } from './array/array.component';
 import { EmpDataComponent } from './emp-data/emp-data.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
    path: 'TemplateDriven',
    component: TempletedrivenformComponent,
+ },
+ {
+  path: 'ArrayData',
+  component: ArrayComponent,
  },
  {
   path:'login',

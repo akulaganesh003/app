@@ -9,6 +9,7 @@ export class NavigationComponent implements OnInit {
   
   tempValue : any;
   tempValue1 : any;
+  name:any;
 
   constructor() { }
   
