@@ -11,14 +11,18 @@ export class ArrayComponent implements OnInit {
 
   user: User;
   usersList: User[] = []
+  Button = 'Save';
 
   ngOnInit(): void {
    this.resetForm();
   }
 
   addStudent() {
+    debugger;
+    this.Button='Processing';debugger;
    this.usersList.push(this.user);
    this.resetForm();
+   this.Button='Save';
   }
 
   editStudent(index: number) {

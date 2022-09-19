@@ -14,15 +14,15 @@ export class EmpDataComponent implements OnInit {
   currentEmpId: string;
 
 
-  constructor(private userData: EmpService) {
-    this.userData.getEmployees().subscribe((data) => {
+  constructor(private _EmpService: EmpService) {
+    this._EmpService.getEmployees().subscribe((data) => {
       this.users = data;
     });
   }
    
   onDeleteEmployee(id: string){
     console.warn(id)
-    this.userData.DeleteEmployee(id).subscribe((result)=>{
+    this._EmpService.DeleteEmployee(id).subscribe((result)=>{
       console.warn(result);
     })
   }

@@ -7,8 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
-
-  registerForm!: FormGroup;
+registerForm!: FormGroup;
   submitted = false;
  
   constructor(private formBuilder: FormBuilder) {}
@@ -35,3 +34,5 @@ export class ReactiveformComponent implements OnInit {
   }
 
 }
+
+  

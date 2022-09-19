@@ -3,21 +3,27 @@
     <form class="form-inline" autocomplete="off" (submit)="addStudent()">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name">
+          <input type="text" class="form-control" id="name" name="name" >
         </div>
         <div class="form-group">
           <label for="age">Age:</label>
-          <input type="number" class="form-control" id="age" name="age" [(ngModel)]="user.age">
+          <input type="number" class="form-control" id="age" name="age" >
         </div>
         <div class="form-group" *ngIf="!(usersList && usersList.length)">
             <label for="college">College:</label>
-            <input type="text" class="form-control" id="college" name="college" [(ngModel)]="user.college">
+            <input type="text" class="form-control" id="college" name="college" >
           </div>
           <div class="form-group" *ngIf="usersList && usersList.length">
             <label for="pwd">College:</label>
-            <input type="text" class="form-control" id="college" name="college" readonly [(ngModel)]="user.college">
+            <input type="text" class="form-control" id="college" name="college" readonly>
           </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+          <!-- <ng-select>
+            <ng-options>Good Morning</ng-options>
+            <ng-options>Good Afternoon</ng-options>
+            <ng-options>Good Evening</ng-options>
+            <ng-options>Good night</ng-options>
+          </ng-select> -->
+        <button type="submit" class="btn btn-success">{{Button}}</button>
     </form>
     
     <div class="user-list" *ngIf="usersList && usersList.length">
