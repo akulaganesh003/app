@@ -23,8 +23,9 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
- 
+  
   onSubmit() {
+    debugger;
     this.submitted = true;
  
     // stop the process here if form is invalid

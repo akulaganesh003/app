@@ -1,0 +1,11 @@
+<p>child works!</p>
+<div *ngIf="ChannelName[0].show">
+<p>{{Wishes}} Data receiveing from parent {{ChannelName | json}}</p>
+<ul *ngFor="let item of ChannelName ">
+    <li>{{item.id}}</li>
+    <li>{{item.name}}</li>
+</ul>
+</div>
+<br>
+
+<button (click)="confirmmessage()">Tell to parent</button>

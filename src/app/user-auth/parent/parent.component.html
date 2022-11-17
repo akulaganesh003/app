@@ -1,0 +1,8 @@
+<p>parent works!</p>
+
+
+<app-child [ChannelName]="SocialMedia" [Wishes]="message"  (confirmResponse)="response($event)"></app-child>
+
+
+<p>Received data from child</p>
+{{responsemsg | json}}

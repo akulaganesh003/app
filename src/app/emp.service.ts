@@ -7,6 +7,9 @@ import { Data } from '@angular/router';
 })
 export class EmpService {
 
+
+
+
   url="http://www.satishcodeden.in/api/EMP/getAllEMP/";
   url2="http://www.satishcodeden.in/api/EMP/addEmp";
   url1="http://www.satishcodeden.in/api/EMP/DeleteEMP?empId=";
@@ -41,5 +44,15 @@ export class EmpService {
       this.http.put(this.url+id, value)
       .subscribe();
   }
+
+
+  employeAraay()
+    {"employees";[  
+      {"name":"Shyam", "email":"shyamjaiswal@gmail.com"},  
+      {"name":"Bob", "email":"bob32@gmail.com"},  
+      {"name":"Jai", "email":"jai87@gmail.com"}  
+  ]}  
+  
+
 
 }

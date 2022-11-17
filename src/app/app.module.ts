@@ -15,6 +15,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TempletedrivenformComponent } from './templetedrivenform/templetedrivenform.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ArrayComponent } from './array/array.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxDatatableComponent } from './ngx-datatable/ngx-datatable.component';
+import { GeneralFormComponent } from './general-form/general-form.component';
 
 
 @NgModule({
@@ -27,6 +30,8 @@ import { ArrayComponent } from './array/array.component';
     TempletedrivenformComponent,
     NavigationComponent,
     ArrayComponent,
+    NgxDatatableComponent,
+    GeneralFormComponent,
   
   ],
   imports: [
@@ -39,6 +44,6 @@ import { ArrayComponent } from './array/array.component';
 
   ],
   providers: [EmpService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,NgxDatatableModule]
 })
 export class AppModule { }

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpService } from '../emp.service';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'app-emp-data',
-  templateUrl: './emp-data.component.html',
+  templateUrl: './emp-data.component.html', 
   styleUrls: ['./emp-data.component.css'],
-  providers: [EmpService]
+  providers: [EmpService,NgxDatatableModule]
 })
 export class EmpDataComponent implements OnInit {
   

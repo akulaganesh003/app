@@ -19,7 +19,8 @@ export class ArrayComponent implements OnInit {
 
   addStudent() {
     debugger;
-    this.Button='Processing';debugger;
+    this.Button='Processing';
+    debugger;
    this.usersList.push(this.user);
    this.resetForm();
    this.Button='Save';
