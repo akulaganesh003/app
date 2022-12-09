@@ -46,13 +46,32 @@ export class EmpService {
   }
 
 
-  employeAraay()
-    {"employees";[  
-      {"name":"Shyam", "email":"shyamjaiswal@gmail.com"},  
-      {"name":"Bob", "email":"bob32@gmail.com"},  
-      {"name":"Jai", "email":"jai87@gmail.com"}  
-  ]}  
-  
+  employeAraay(){
+    debugger;
+    let emp =[  
+                   {name:"Shyam", email:"shyamjaiswal@gmail.com"},  
+                   {name:"Bob", email:"bob32@gmail.com"},  
+                   {name:"Jai", email:"jai87@gmail.com"}  
+            ]  
+            return emp
+          }
+
+    collegeStudents(){
+      debugger
+      let student=[
+        {id:1,name:"Ganesh",place:"Gopavaram"},
+        {id:2,name:"Sriram",place:"Amalapuram"},
+        {id:3,name:"Vinay",place:"Gopavaram"},
+        {id:4,name:"Mallesh",place:"Dodavaram"},
+        {id:5,name:"Mark",place:"Gangalakurru"},
+        {id:6,name:"Venkatesh",place:"Peruru"},
+        {id:7,name:"Srinu",place:"Peruru"},
+        {id:8,name:"Subbu",place:"Aduru"},
+        {id:9,name:"Pradeep",place:"HighSchool Center"},
+        {id:10,name:"Anand",place:"Edarapalli"},
+     ];
+     return student
+    }      
 
 
 }

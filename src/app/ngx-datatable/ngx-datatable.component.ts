@@ -8,13 +8,15 @@ import { EmpService } from '../emp.service';
 })
 export class NgxDatatableComponent implements OnInit {
    
-  empdata:any=[];
+  empdata:any;
+  collegeStudents:  any;
 
   constructor(private empService:EmpService) { }
 
   ngOnInit(): void {
     debugger
-    this.empdata=this.empService.employeAraay;
+    this.empdata=this.empService.employeAraay();
+    this.collegeStudents=this.empService.collegeStudents();
   }
 
 }
